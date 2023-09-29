@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <typeAlias type="com.example.app.domain.dto.UserDto" alias="userDto"/>
+        <typeAlias type="com.example.app.domain.dto.BoardDto" alias="boardDto"/>
+        <typeAlias type="com.example.app.domain.dto.FileDto" alias="fileDto"/>
+        <typeAlias type="com.example.app.domain.dto.ReplyDto" alias="replyDto"/>
+        <typeAlias type="com.example.app.domain.dto.SummerDto" alias="summerDto"/>
+
+        <typeAlias type="com.example.app.domain.vo.BoardVo" alias="boardVo" />
+        <typeAlias type="com.example.app.domain.vo.PageVo" alias="pageVo"/>
+        <typeAlias type="com.example.app.domain.vo.ReplyVo" alias="replyVo"/>
+
+        <typeAlias type="com.example.app.domain.vo.Criteria" alias="criteria"/>
+    </typeAliases>
+</configuration>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.app.mapper.SummerMapper">
+    <select id="select" resultType="summerDto">
+        SELECT SUMMER_NUMBER, SUMMER_CONTENT
+        FROM TBL_SUMMER
+        WHERE SUMMER_NUMBER = #{summerNumber}
+    </select>
+
+    <insert id="insert">
+        INSERT INTO TBL_SUMMER(SUMMER_NUMBER, SUMMER_CONTENT)
+        VALUES(SEQ_SUMMER.NEXTVAL, #{summerContent})
+    </insert>
+</mapper>

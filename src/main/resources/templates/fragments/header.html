@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- fragment(조각)로 등록 fragment의 이름을 header로 설정-->
+<header class="header" th:fragment="header">
+  <div class="header-container">
+    <a href="/board/list" class="logo">LOGO</a>
+    <nav class="nav" th:if="${session.userNumber == null}">
+      <a href="/user/login" class="nav-item login">로그인</a>
+      <a href="/user/join" class="nav-item signup">회원가입</a>
+    </nav>
+    <nav class="nav" th:unless="${session.userNumber == null}">
+      <a href="/user/logout" class="nav-item login">로그아웃</a>
+    </nav>
+  </div>
+</header>
+</body>
+</html>

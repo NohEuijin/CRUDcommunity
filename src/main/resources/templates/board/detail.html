@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>게시물 상세보기</title>
+  <link rel="stylesheet" href="/css/board/boardList.css" />
+  <link rel="stylesheet" href="/css/board/boardView.css" />
+</head>
+<body>
+
+<header class="header" th:replace="fragments/header :: header">
+</header>
+
+<div class="container">
+  <h1 class="title">자유 게시판</h1>
+  <div class="post-wrap">
+    <div class="post-wrap__box">
+      <div class="post-header">
+        <h2 class="post-title" th:text="${board.boardTitle}">게시물 제목</h2>
+        <p class="post-info" th:text="'작성자 : ' + ${board.userId} + ' | 작성일 : ' + ${board.boardRegisterDate} + ' | 수정일 : ' + ${board.boardUpdateDate}">작성자: 홍길동 | 작성일: 2023-03-31 | 수정일 : 2023-04-01</p>
+      </div>
+      <div class="post-content" th:text="${board.boardContent}">게시물 내용</div>
+      <div class="post-images">
+        <!-- 이미지 예시 -->
+        <img src="example1.jpg" alt="첨부 이미지 1" />
+        <img src="example2.jpg" alt="첨부 이미지 2" />
+        <!-- /이미지 예시 -->
+      </div>
+    </div>
+    <div class="btn-wrap">
+      <th:block th:if="${session.userNumber == board.userNumber}">
+        <button type="button" class="btn-modify" th:data-number="${board.boardNumber}">수정</button>
+        <button type="button" class="btn-remove" th:data-number="${board.boardNumber}">삭제</button>
+      </th:block>
+      <button type="button" class="btn-back">뒤로 가기</button>
+    </div>
+    <div class="reply-wrap">
+      <h3>댓글 작성</h3>
+      <div class="reply-wrap__box">
+        <div class="reply-content__box">
+          <div class="reply-writer" th:text="${board.userId}">홍길동</div>
+          <textarea name="replyContent" id="reply-content" cols="30" rows="10"></textarea>
+        </div>
+        <div class="reply-btn-wrap">
+          <button type="button" class="btn-reply">작성 완료</button>
+        </div>
+      </div>
+
+      <!-- 댓글 리스트 -->
+      <div class="reply-list-wrap">
+        <!-- 리플 예시 -->
+
+        <!-- /리플 예시 -->
+      </div>
+    </div>
+  </div>
+</div>
+<input type="hidden" th:value="${board.boardNumber}" class="board-num">
+
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+
+<script th:inline="javascript"> // 타임리프 문법을 자바스크립트에서 사용하기 위한 설정
+  let loginNumber = [[${session.userNumber}]]; // 타임리프 문법은 [] 2개로 감싸줘야 한다.
+</script>
+
+<script type="module" src="/js/board/boardView.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

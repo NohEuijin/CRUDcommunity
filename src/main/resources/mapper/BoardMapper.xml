@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.app.mapper.BoardMapper">
+    <insert id="insert">
+        <selectKey keyProperty="boardNumber" order="BEFORE" resultType="long">
+            SELECT SEQ_BOARD.NEXTVAL FROM DUAL
+        </selectKey>
+        insert into TBL_BOARD (BOARD_NUMBER, BOARD_TITLE, BOARD_CONTENT, USER_NUMBER)
+        values (#{boardNumber}, #{boardTitle}, #{boardContent}, #{userNumber})
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM TBL_BOARD
+        WHERE BOARD_NUMBER = #{boardNumber}
+    </delete>
+
+    <update id="update">
+        UPDATE TBL_BOARD
+        SET BOARD_TITLE = #{boardTitle}, BOARD_CONTENT = #{boardContent}, BOARD_UPDATE_DATE = SYSDATE
+        WHERE BOARD_NUMBER = #{boardNumber}
+    </update>
+
+    <select id="select" resultType="boardVo">
+        SELECT BOARD_NUMBER, BOARD_TITLE, BOARD_CONTENT, B.USER_NUMBER,
+               BOARD_UPDATE_DATE, BOARD_REGISTER_DATE, U.USER_ID
+        FROM TBL_BOARD B JOIN TBL_USER U
+                              ON B.USER_NUMBER = U.USER_NUMBER
+        WHERE B.BOARD_NUMBER = #{boardNumber}
+    </select>
+
+    <select id="selectAll" resultType="boardVo">
+        SELECT RNUM, BOARD_NUMBER, BOARD_TITLE, BOARD_CONTENT, BOARD_REGISTER_DATE, BOARD_UPDATE_DATE, USER_NUMBER,
+        USER_ID, FILE_UPLOAD_PATH, FILE_UUID, FILE_NAME
+        FROM (
+            SELECT ROWNUM AS RNUM, BOARD_NUMBER, BOARD_TITLE, BOARD_CONTENT, BOARD_REGISTER_DATE, BOARD_UPDATE_DATE, USER_NUMBER,
+            USER_ID, FILE_UPLOAD_PATH, FILE_UUID, FILE_NAME
+            FROM (
+                SELECT B.BOARD_NUMBER, BOARD_TITLE, BOARD_CONTENT, BOARD_REGISTER_DATE, BOARD_UPDATE_DATE, B.USER_NUMBER,
+                U.USER_ID, FILE_UPLOAD_PATH, FILE_UUID, FILE_NAME
+                FROM TBL_BOARD B JOIN TBL_USER U
+                ON B.USER_NUMBER = U.USER_NUMBER
+                LEFT OUTER JOIN (
+                    SELECT FILE_UPLOAD_PATH, FILE_UUID, FILE_NAME, BOARD_NUMBER
+                    FROM (
+                        SELECT FILE_UPLOAD_PATH, FILE_UUID, FILE_NAME, BOARD_NUMBER,
+                        RANK() OVER(PARTITION BY BOARD_NUMBER ORDER BY FILE_NUMBER) RK
+                        FROM TBL_FILE
+                    )
+                    WHERE RK = 1
+                ) J1
+                ON B.BOARD_NUMBER = J1.BOARD_NUMBER
+                ORDER BY B.BOARD_NUMBER DESC
+            ) X
+            <![CDATA[
+            WHERE ROWNUM <= #{page} * #{amount}
+            ]]>
+        ) Y
+        WHERE RNUM > (#{page} - 1) * #{amount}
+    </select>
+
+    <select id="selectTotal" resultType="_int">
+        SELECT COUNT(BOARD_NUMBER)
+        FROM TBL_BOARD
+    </select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
