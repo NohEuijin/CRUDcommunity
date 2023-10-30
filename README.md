@@ -1,4 +1,4 @@
-# 프로젝트 이름 : SpringBoot CRUD Community
+# 프로젝트 이름 : SpringBoot CRUD Community📒
 
 ## 📚프로젝트 목적
 
@@ -6,7 +6,7 @@ SpringBoot를 이용하여 가벼운 CRUD와 로그인 회원가입 및
 페이징처리, 파일처리을 연습해보는 목적인
 1인 토이 프로젝트
 
-## 목차
+## 📖목차
   - [ERD구성](#erd구성)
   - [Tools](#tools)
   - [작업 내용](#작업-내용)
@@ -34,7 +34,7 @@ SpringBoot를 이용하여 가벼운 CRUD와 로그인 회원가입 및
 ### DB
 - **Oracle**
 
-## 작업 내용
+## 🏷작업 내용
 
 ### 로그인-회원가입입 <a href="https://github.com/NohEuijin/RedMedicine2/wiki/%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80"> WIKI로 이동</a>
 
