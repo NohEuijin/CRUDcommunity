@@ -17,7 +17,7 @@ SpringBoot를 이용하여 가벼운 CRUD와 로그인 회원가입 및
     - [리플 쓰기, 수정, 삭제 WIKI로 이동](#리플-쓰기-수정-삭제-wiki로-이동)
 
 
-## ERD구성
+## 💡ERD구성
 
 <details open>
 <summary>ERD</summary>
@@ -28,7 +28,7 @@ SpringBoot를 이용하여 가벼운 CRUD와 로그인 회원가입 및
 
 </details>
 
- ## Tools
+ ## 🗡Tools
 - **Java**
 - **Spring Boot**
 ### DB
@@ -51,13 +51,13 @@ SpringBoot를 이용하여 가벼운 CRUD와 로그인 회원가입 및
 ### 글쓰기<a href="https://github.com/NohEuijin/RedMedicine2/wiki/%EC%83%81%EB%8B%B4%EC%82%AC%ED%94%84%EB%A1%9C%ED%95%84(%EB%AA%A9%EB%A1%9D%EB%B3%B4%EA%B8%B0)#%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C"> WIKI로 이동</a>
 
 <a href="https://github.com/NohEuijin/RedMedicine2/wiki/%EC%83%81%EB%8B%B4%EC%82%AC%ED%94%84%EB%A1%9C%ED%95%84(%EB%AA%A9%EB%A1%9D%EB%B3%B4%EA%B8%B0)#%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C"> 
- <img src="https://github.com/NohEuijin/CRUDcommunity/assets/141835418/b3be6fb9-8d15-430e-88bb-4303ca71e19e?type=w580" width="500">
+ <img src="https://github.com/NohEuijin/CRUDcommunity/assets/141835418/be7071a1-55a3-403d-9b8f-e015691ccc15?type=w580" width="500">
 </a>
 
 ### 글수정, 삭제<a href="https://github.com/NohEuijin/RedMedicine2/wiki/%EC%83%81%EB%8B%B4%EC%82%AC%ED%94%84%EB%A1%9C%ED%95%84(%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0)"> WIKI로 이동</a>
 
 <a href="https://github.com/NohEuijin/RedMedicine2/wiki/%EC%83%81%EB%8B%B4%EC%82%AC%ED%94%84%EB%A1%9C%ED%95%84(%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0)"> 
-  <img src="https://github.com/NohEuijin/CRUDcommunity/assets/141835418/3ca373b8-cd1b-4dc9-8d29-78ab3fc6e496?type=w580" width="500">
+  <img src="https://github.com/NohEuijin/CRUDcommunity/assets/141835418/023d2c43-ef93-46bb-adca-d87a76637b75?type=w580" width="500">
 </a>
 
 ### 리플 쓰기, 수정, 삭제<a href="https://github.com/NohEuijin/CRUDcommunity/wiki/%EB%A6%AC%ED%94%8C(%EC%93%B0%EA%B8%B0,%EC%88%98%EC%A0%95,%EC%82%AD%EC%A0%9C)"> WIKI로 이동</a>
