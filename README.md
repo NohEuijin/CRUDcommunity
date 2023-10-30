@@ -10,12 +10,11 @@ SpringBoot를 이용하여 가벼운 CRUD와 로그인 회원가입 및
   - [ERD구성](#erd구성)
   - [Tools](#tools)
   - [작업 내용](#작업-내용)
-    - [메인페이지 WIKI로 이동](#메인페이지--wiki로-이동)
-    - [상담사등록 WIKI로 이동](#상담사-등록-wiki로-이동)
-    - [상담사 프로필(목록) WIKI로 이동](#상담사-프로필목록-wiki로-이동)
-    - [상담사 프로필(상세보) WIKI로 이동](#상담사-프로필목록-wiki로-이동)
-    - [상담 예약 회원 관리 WIKI로 이동](#상담예약-회원관리-wiki로-이동)
-    - [제휴등록 WIKI로 이동](#제휴등록-wiki로-이동)
+    - [회원가입-로그인 WIKI로 이동](#로그인-회원가입입--wiki로-이동)
+    - [페이징처리-글상세보기 WIKI로 이동](#페이징처리-글상세보기-wiki로-이동)
+    - [글쓰기 WIKI로 이동](#글쓰기-wiki로-이동)
+    - [글 수정, 삭제 WIKI로 이동](#글수정-삭제-wiki로-이동)
+    - [리플 쓰기, 수정, 삭제 WIKI로 이동](#리플-쓰기-수정-삭제-wiki로-이동)
 
 
 ## ERD구성
@@ -64,7 +63,7 @@ SpringBoot를 이용하여 가벼운 CRUD와 로그인 회원가입 및
  <img src="https://github.com/2teamSpring/RedMedicine/assets/141835418/8da2cb24-0160-4239-b2b9-2022da9132ad?type=w580" width="500">
 </a>
 
-### 글수정, 삭제제<a href="https://github.com/NohEuijin/RedMedicine2/wiki/%EC%83%81%EB%8B%B4%EC%82%AC%ED%94%84%EB%A1%9C%ED%95%84(%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0)"> WIKI로 이동</a>
+### 글수정, 삭제<a href="https://github.com/NohEuijin/RedMedicine2/wiki/%EC%83%81%EB%8B%B4%EC%82%AC%ED%94%84%EB%A1%9C%ED%95%84(%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0)"> WIKI로 이동</a>
 - 상담사 목록에서 상담사 프로필 클릭시 상세보기로 이동
 - 로그인한 본인의 상담사 상세보기 페이지라면 삭제가 가능
 - 예약 버튼 클릭 시 예약 페이지로 이동
