@@ -8,7 +8,7 @@ SpringBoot를 이용하여 가벼운 CRUD와 로그인 회원가입 및
 
 ## 📖목차
   - [ERD구성](#erd구성)
-  - [Tools](#tools)
+  - [Skill](#skill)
   - [작업 내용](#작업-내용)
     - [회원가입-로그인 WIKI로 이동](#로그인-회원가입입--wiki로-이동)
     - [페이징처리-글상세보기 WIKI로 이동](#페이징처리-글상세보기-wiki로-이동)
@@ -28,7 +28,7 @@ SpringBoot를 이용하여 가벼운 CRUD와 로그인 회원가입 및
 
 </details>
 
- ## 🗡Tools
+ ## 🗡Skill
 - **Java**
 - **Spring Boot**
 ### DB
